@@ -1,0 +1,14 @@
+/* RESET ERIC MEYER 2.0 */
+@import url(reset.css);
+
+/* FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+
+/* 
+font-family: 'Handlee', cursive; -> PARA TITULOS
+font-family: 'Montserrat', sans-serif; -> PARA BODY
+*/
+
+* {
+    box-sizing: border-box;
+}
