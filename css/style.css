@@ -2,99 +2,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
-* {
+*{
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+   scroll-behavior: smooth; 
 }
-
 /*
 font-family: 'Handlee', cursive;
 font-family: 'Montserrat', sans-serif;
 */
 
-:root {
-    --fuenteprincipal: 'Montserrat', sans-serif;
-    --fuentetitulos: 'Handlee', cursive;
-    --colorprincipal: #fa573a;
-    --colorsecundario: #21242e;
-    --fontsize: 1rem;
-    --anchomaximo: 68.75rem;
-    --margingrid: 1rem;
+:root{
+   --fuenteprincipal: 'Montserrat', sans-serif;
+   --fuentetitulos: 'Handlee', cursive;
+   --colorprincipal: #fa573a;
+   --colorsecundario: #21242e;
+   --fontsize: 1rem;
+   --anchomaximo: 68.75rem;
+   --margingrid: 1rem;
 }
 
-img {
+img{
     width: 100%;
     height: auto;
     display: block;
 }
 
-.container {
+.container{
     max-width: var(--anchomaximo);
     margin: 0 auto;
-    padding: 0 0.625rem;
+    padding:0 0.625rem;
 }
 
 
-body {
+body{
     font-family: var(--fuenteprincipal);
     font-size: var(--fontsize);
 }
 
 /* inicio header */
 
-header .nav-top {
+header .nav-top{
     background-color: var(--colorsecundario);
     padding: 1.25rem 0rem;
 }
 
-header .nav-top .container {
+header .nav-top .container{
     display: flex;
     justify-content: space-around;
-
-    & span {
+    & span{
         display: none;
     }
-
-    & i {
+    & i{
         color: var(--colorprincipal);
         font-size: 140%;
     }
 }
 
-header nav .container {
+header nav .container{
     display: flex;
     flex-wrap: wrap;
 }
 
-header nav figure a {
+header nav figure a{
     display: block;
     max-width: 6.25rem;
 }
 
-header figure {
+header figure{
     width: calc(100% - 1.875rem);
     padding: 1.25rem 0;
 }
 
-header .hamburguesa {
+header .hamburguesa{
     width: 1.875rem;
     padding: 1.25rem 0;
     cursor: pointer;
 }
 
-header .menu {
+header .menu{
     width: 100%;
 }
 
-header .hamburguesa div {
+header .hamburguesa div{
     border-top: 2px solid #aaa;
     margin-bottom: 0.625rem;
 }
 
-header .menu a {
+header .menu a{
     display: block;
     width: 100%;
     text-decoration: none;
@@ -105,11 +102,11 @@ header .menu a {
 }
 
 
-header .menu li:last-child a {
+header .menu li:last-child  a{
     border-bottom: 0;
 }
 
-header .menu .activo {
+header .menu .activo{
     color: var(--colorprincipal);
 }
 
@@ -117,7 +114,7 @@ header .menu .activo {
 
 /* inicio footer */
 
-footer {
+footer{
     background-color: var(--colorsecundario);
     text-align: center;
     color: white;
@@ -127,16 +124,15 @@ footer {
     width: 100%;
 }
 
-footer a {
+footer a{
     color: white;
     text-decoration: none;
-
-    &:hover {
+    &:hover{
         color: var(--colorprincipal)
     }
 }
 
-.flecha a {
+.flecha a{
     font-size: 300%;
     color: var(--colorprincipal);
     position: fixed;
@@ -144,116 +140,127 @@ footer a {
     right: 0.625rem;
 }
 
+
+
 /* fin footer */
 
-/* Inicio Hero */
+/* inicio  hero */
 
-.hero {
-    background-image: url(../images/fondo.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-color: #777;
-    background-blend-mode: multiply;
-}
-
-
-.hero .container {
-    padding: 8.125rem 0.625rem;
-}
-
-.hero h1 {
-    font-family: var(--fuentetitulos);
-    font-size: 2.25rem;
-    color: white;
-}
-
-.hero h2 {
-    color: var(--colorprincipal);
-    font-size: 1.25rem;
-    margin: var(--margingrid) 0;
-}
-
-.hero p {
-    color: white;
-}
-
-.boton {
-    display: inline-block;
-    background-color: var(--colorprincipal);
-    padding: 1.15rem;
-    margin: var(--margingrid) 0;
-    color: white;
-    text-decoration: none;
-    border: 1px solid var(--colorprincipal);
-}
-
-.boton:hover {
-    background-color: transparent;
-    color: var(--colorprincipal);
-
-    & i {
-        transform: translateX(5px);
-        transition: transform 0.5s;
+    .hero {
+        background-image: url('../images/fondo.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-color: #777;
+        background-blend-mode: multiply;
     }
-}
 
-.hero .social {
-    display: flex;
-    justify-content: space-between;
-    width: 10rem;
+    .hero .container{
+        padding: 130px 10px;
+    }
 
-    & a {
-        font-size: 2rem;
+    .hero h1{
+        font-family: var(--fuentetitulos);
+        font-size: 2.25rem;
+        color: white;
+    }
+
+    .hero h2{
+        color: var(--colorprincipal);
+        font-size: 1.25rem;    
+        margin: var(--margingrid) 0;
+    }
+
+    .hero p{
+        color: white;
+    }
+    
+    .boton{
+        display: inline-block;
+        background-color: var(--colorprincipal);
+        padding: 1.15rem;  
+        margin: var(--margingrid) 0;
         color: white;
         text-decoration: none;
+          border: 1px solid var(--colorprincipal);
+        &:hover{
+            background-color: transparent;
+            color: var(--colorprincipal);
+            & i{
+                transform: translateX(5px);
+                transition: transform 0.5s;
+            }
+        }
     }
-}
 
-/* Fin Hero */
+    .hero .social{
+        display: flex;
+        justify-content: space-between;
+        width: 10rem;
+        & a{
+            font-size: 2em;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+
+
+
+
+/* fin hero */
+
 
 
 
 /* inicio mequeries */
 
-@media(min-width: 48rem) {
-    header .nav-top .container {
+@media( min-width: 48rem ){
+    header .nav-top .container{
         justify-content: space-between;
-
-        & span {
+        & span{
             display: inline;
+            
         }
-
-        & a {
+        & a{
             color: white;
             text-decoration: none;
             font-size: 110%;
         }
-    }
-
-    footer {
+    }   
+    
+    footer{
         text-align: left;
     }
 }
 
-@media(min-width: 62.75rem) {
-    header .hamburguesa {
-        display: none;
-    }
+@media(min-width: 62.75rem){
+       header .hamburguesa{
+           display: none;
+       } 
 
-    header nav .container {
-        flex-wrap: nowrap;
-    }
+       header nav .container{   
+            flex-wrap: nowrap;
+        }
 
-    header .menu {
-        padding: 0.5rem 0;
-        display: flex;
-        justify-content: end;
-    }
+       header .menu{
+         padding: 0.5rem 0;
+         display: flex;
+         justify-content: end;
+       }
 
-    header .menu a {
-        border: 0px;
-        padding: 1.25rem 0rem 1.25rem 2.5rem;
-    }
+       header .menu a{
+            border: 0px;
+            padding: 1.25rem 0rem 1.25rem 2.5rem;
+       }
 }
 
 /* fin mequeries */
+
+
+
+
+
+
+
+
+
