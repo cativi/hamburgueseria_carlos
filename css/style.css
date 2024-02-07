@@ -121,7 +121,36 @@ header .menu li:last-child a {
 
 /* FINAL HEADER */
 
+/* INICIO FOOTER */
 
+footer {
+    background-color: var(--colorsecundario);
+    text-align: center;
+    color: white;
+    padding: 1.25rem 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--colorprincipal);
+    }
+}
+
+.flecha a {
+    font-size: 300%;
+    color: var(--colorprincipal);
+    position: fixed;
+    bottom: 3.75rem;
+    right: 0.625rem;
+}
+
+/* FINAL FOOTER */
 
 /* INICIO MEDIA QUERIES */
 
@@ -138,6 +167,10 @@ header .menu li:last-child a {
             text-decoration: none;
             font-size: 120%;
         }
+    }
+
+    footer {
+        text-align: left;
     }
 }
 
