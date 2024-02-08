@@ -292,6 +292,53 @@ main .grid article {
 /* final our services */
 
 
+/* inicio about us */
+
+#aboutus {
+    margin-bottom: 12.5rem;
+}
+
+section#aboutus .flex {
+    margin-top: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--margingrid);
+
+    & h3 {
+        font-weight: 700;
+        font-size: 120%;
+    }
+
+    & h4 {
+        color: var(--colorprincipal);
+        font-size: 110%;
+        margin: var(--margingrid) 0;
+    }
+
+    & p {
+        color: #666;
+        list-height: 1.20;
+    }
+}
+
+section#aboutus .imagen {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    width: 95%;
+    transition: 1s;
+}
+
+section#aboutus .imagen .marco {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+section#aboutus figure:hover :is(.imagen, .marco) {
+    transform: rotateZ(0deg);
+}
+
+/* final about us */
+
 
 /* inicio mequeries */
 
@@ -311,6 +358,11 @@ main .grid article {
         padding: 1.25rem;
         border-bottom: 0;
         border-left: 1px solid #aaa;
+    }
+
+    section#aboutus .flex {
+        flex-direction: row;
+
     }
 
     @media(min-width: 48rem) {
