@@ -400,7 +400,68 @@ section#blog .grid article div.blog-date p {
 
 /* fin our blogs */
 
+/* inicio Menu */
 
+
+section#menu {
+    background-color: var(--colorsecundario);
+}
+
+section#menu h2 {
+    color: white;
+}
+
+
+/* INCLUIR EN LAS MEDIA QUERIES
+section#menu .container div {
+    max-width: 18.75rem;
+} */
+
+nav.product-categories ul li a:first-child {
+    margin-top: 10%;
+}
+
+nav.product-categories ul li.activo a {
+    background-color: var(--colorprincipal);
+    display: block;
+    border-radius: 2px;
+}
+
+nav.product-categories ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--fuenteprincipal);
+    line-height: 2;
+    font-size: 1rem;
+    padding-left: 2.5%;
+}
+
+section#menu .container div {
+    position: relative;
+}
+
+section#menu .container div h3 {
+    font-family: var(--fuenteprincipal);
+    color: white;
+    font-weight: 700;
+    margin-top: 10%;
+}
+
+section#menu .container div hr {
+    color: var(--colorprincipal);
+    width: 3.75rem;
+    position: absolute;
+    left: 0;
+}
+
+section#menu .container div p {
+    font-family: var(--fuenteprincipal);
+    color: white;
+    font-weight: 100;
+    margin: 5% 0;
+}
+
+/* fin Menu */
 
 
 /* inicio mequeries */
