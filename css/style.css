@@ -357,7 +357,7 @@ section#blog .container .grid article {
     border-bottom: none;
 }
 
-& h4 {
+#blog h4 {
     color: var(--colorprincipal);
     font-size: 100%;
     margin: var(--margingrid) 0;
@@ -398,27 +398,38 @@ section#blog .grid article div.blog-date p {
     text-align: center;
 }
 
+/* Afecta a Blogs + Menu */
+.enlace:hover i {
+    transform: translateX(5px);
+    transition: transform 0.5s;
+}
+
 /* fin our blogs */
 
 /* inicio Menu */
 
+.wrapper {
+    padding-bottom: 300px;
+}
 
-section#menu {
+/* QUITAR MARGIN-BOTTOM DEL WRAPPER CUANDO ACABEMOS */
+
+#menu {
     background-color: var(--colorsecundario);
 }
 
-section#menu h2 {
+
+#menu h2 {
     color: white;
 }
 
+#menu .flex {
+    margin-top: 1rem;
+}
 
-/* INCLUIR EN LAS MEDIA QUERIES
-section#menu .container div {
-    max-width: 18.75rem;
-} */
 
 nav.product-categories ul li a:first-child {
-    margin-top: 10%;
+    margin-top: 1rem;
 }
 
 nav.product-categories ul li.activo a {
@@ -436,29 +447,66 @@ nav.product-categories ul li a {
     padding-left: 2.5%;
 }
 
-section#menu .container div {
+#menu .container div {
     position: relative;
 }
 
-section#menu .container div h3 {
+#menu .container div h3 {
     font-family: var(--fuenteprincipal);
     color: white;
     font-weight: 700;
-    margin-top: 10%;
+    margin-top: 0.5rem;
+    font-size: 110%;
 }
 
-section#menu .container div hr {
+.left-side-bar hr {
     color: var(--colorprincipal);
     width: 3.75rem;
     position: absolute;
     left: 0;
 }
 
+#menu .featured {
+    margin-top: 3%;
+}
+
 section#menu .container div p {
     font-family: var(--fuenteprincipal);
     color: white;
     font-weight: 100;
-    margin: 5% 0;
+    padding: 0.3rem 0;
+    /* line-height: 1.5; */
+    font-size: 0.75rem;
+}
+
+#menu .products-grid article div {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#menu img {
+    margin: 0.75rem 0;
+}
+
+#menu .products-grid article .product-name {
+    font-weight: 900;
+    font-size: 1rem;
+    width: 90%;
+}
+
+#menu .products-grid article a {
+    color: var(--colorprincipal);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#menu .products-grid article div p.price {
+    position: absolute;
+    right: 3%;
+    top: 0;
+    color: var(--colorprincipal);
 }
 
 /* fin Menu */
@@ -489,62 +537,131 @@ section#menu .container div p {
     section#blog .container .grid article {
         border-left: none;
     }
-}
 
-@media(min-width: 48rem) {
-    header .nav-top .container {
-        justify-content: space-between;
-
-        & span {
-            display: inline;
-
-        }
-
-        & a {
-            color: white;
-            text-decoration: none;
-            font-size: 110%;
-        }
-    }
-
-    footer {
-        text-align: left;
-    }
-
-    main .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    main .grid article:last-child {
-        grid-column: auto;
-    }
-
-    section#blog .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-
-}
-
-@media(min-width: 62.75rem) {
-    header .hamburguesa {
-        display: none;
-    }
-
-    header nav .container {
-        flex-wrap: nowrap;
-    }
-
-    header .menu {
-        padding: 0.5rem 0;
+    /* MENU QUERY */
+    #menu .flex {
         display: flex;
-        justify-content: end;
+        width: 100%;
     }
 
-    header .menu a {
-        border: 0px;
-        padding: 1.25rem 0rem 1.25rem 2.5rem;
+    #menu .flex .left-side-bar {
+        width: 30%;
     }
-}
 
-/* fin mequeries */
+    #menu .flex .left-side-bar h3 {
+        margin-top: 3rem;
+    }
+
+    nav.product-categories ul li a:first-child {
+        margin-top: 0.5rem;
+    }
+
+    #menu .flex .left-side-bar p.featured {
+        line-height: 2;
+    }
+
+    #menu .flex .products-grid {
+        margin-left: 2rem;
+        width: 70%;
+    }
+
+    #menu .products-grid article {
+        display: flex;
+        flex-wrap: wrap;
+        /* CG */
+        align-items: flex-start;
+    }
+
+    #menu .products-grid article figure {
+        width: 30%;
+        /* CG */
+        margin-bottom: 0;
+    }
+
+    #menu img {
+        margin: 0;
+    }
+
+    #menu article {
+        margin: 0.5rem 0;
+    }
+
+    #menu .products-grid article div {
+        width: 70%;
+        padding-left: 1rem;
+        position: relative;
+        /* CG */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #menu .products-grid article div a {
+        display: inline-block;
+        margin-top: auto;
+        align-self: flex-start;
+        /* Alinear el enlace al final del contenedor */
+    }
+
+    #menu .products-grid a {
+        /* position: absolute; */
+        bottom: 1rem;
+    }
+
+    @media(min-width: 48rem) {
+        header .nav-top .container {
+            justify-content: space-between;
+
+            & span {
+                display: inline;
+
+            }
+
+            & a {
+                color: white;
+                text-decoration: none;
+                font-size: 110%;
+            }
+        }
+
+        footer {
+            text-align: left;
+        }
+
+        main .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        main .grid article:last-child {
+            grid-column: auto;
+        }
+
+        section#blog .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+
+    }
+
+    @media(min-width: 62.75rem) {
+        header .hamburguesa {
+            display: none;
+        }
+
+        header nav .container {
+            flex-wrap: nowrap;
+        }
+
+        header .menu {
+            padding: 0.5rem 0;
+            display: flex;
+            justify-content: end;
+        }
+
+        header .menu a {
+            border: 0px;
+            padding: 1.25rem 0rem 1.25rem 2.5rem;
+        }
+    }
+
+    /* fin mequeries */
