@@ -399,9 +399,14 @@ section#blog .grid article div.blog-date p {
 }
 
 /* Afecta a Blogs + Menu */
+.enlace:hover {
+    color: grey;
+}
+
 .enlace:hover i {
     transform: translateX(5px);
     transition: transform 0.5s;
+    color: grey;
 }
 
 /* fin our blogs */
@@ -445,6 +450,10 @@ nav.product-categories ul li a {
     line-height: 2;
     font-size: 1rem;
     padding-left: 2.5%;
+}
+
+nav.product-categories ul li a:hover {
+    color: var(--colorprincipal);
 }
 
 #menu .container div {
@@ -500,6 +509,10 @@ section#menu .container div p {
     color: var(--colorprincipal);
     text-decoration: none;
     font-weight: 700;
+}
+
+#menu .products-grid article a:hover {
+    color: grey;
 }
 
 #menu .products-grid article div p.price {
@@ -561,21 +574,19 @@ section#menu .container div p {
     }
 
     #menu .flex .products-grid {
-        margin-left: 2rem;
-        width: 70%;
+        margin-left: 2.5rem;
+        width: 50%;
     }
 
     #menu .products-grid article {
         display: flex;
         flex-wrap: wrap;
-        /* CG */
         align-items: flex-start;
     }
 
     #menu .products-grid article figure {
         width: 30%;
-        /* CG */
-        margin-bottom: 0;
+        margin-bottom: 1.5rem;
     }
 
     #menu img {
@@ -638,6 +649,10 @@ section#menu .container div p {
 
         section#blog .grid {
             grid-template-columns: repeat(3, 1fr);
+        }
+
+        #menu .flex .products-grid {
+            margin-left: 5rem;
         }
 
 
