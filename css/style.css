@@ -285,6 +285,7 @@ main .grid article {
 }
 
 /* final our services */
+
 /* inicio about us */
 
 #aboutus {
@@ -413,11 +414,6 @@ section#blog .grid article div.blog-date p {
 
 /* inicio Menu */
 
-.wrapper {
-    padding-bottom: 300px;
-}
-
-/* QUITAR MARGIN-BOTTOM DEL WRAPPER CUANDO ACABEMOS */
 
 #menu {
     background-color: var(--colorsecundario);
@@ -601,7 +597,6 @@ section#menu .container div p {
         width: 70%;
         padding-left: 1rem;
         position: relative;
-        /* CG */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -611,11 +606,10 @@ section#menu .container div p {
         display: inline-block;
         margin-top: auto;
         align-self: flex-start;
-        /* Alinear el enlace al final del contenedor */
+
     }
 
     #menu .products-grid a {
-        /* position: absolute; */
         bottom: 1rem;
     }
 
